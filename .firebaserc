@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lernkarten-angular-firebase": {
+      "hosting": {
+        "lernkarten-angular-firebase": [
+          "lernkarten-angular-firebase"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lernkarten-angular-firebase"
+  }
+}
