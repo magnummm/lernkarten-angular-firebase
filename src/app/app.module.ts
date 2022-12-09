@@ -10,11 +10,15 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { environment } from 'environments/environment';
+import { GameComponent } from './game/game.component';
+import { LearningCardComponent } from './learning-card/learning-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    GameComponent,
+    LearningCardComponent
   ],
   imports: [
     BrowserModule,
