@@ -1,0 +1,19 @@
+/* .btn-group{
+    width: 100%;
+}
+.btn-group .btn{
+    width: 33,33%;
+} */
+
+.btn{
+    width: 100%;
+    text-align:center;
+    }
+.container{
+    min-height: 50vh;
+    background-color: aqua;
+}
+.bottomtest{
+    display: flex;
+    justify-content: space-between;
+}
