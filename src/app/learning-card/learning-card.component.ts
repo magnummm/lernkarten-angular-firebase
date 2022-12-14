@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SelfRating } from 'enum/SelfRating';
 import { LearningCard } from './learning-card';
 
 @Component({
@@ -8,12 +9,29 @@ import { LearningCard } from './learning-card';
 })
 export class LearningCardComponent implements OnInit {
 
-  @Input() learningCard!: LearningCard
+  @Input() learningCard!: LearningCard;
+  @Output() selfRatingOut=new EventEmitter<SelfRating>;
+
+
+  answerShown=false;
+  selfRating=SelfRating;
+
   constructor() { 
 
   }
 
   ngOnInit(): void {
   }
+
+  showAnswer(){
+    this.answerShown=true;
+  }
+
+  sendSelfRating(selfRating:SelfRating){
+    this.selfRatingOut.emit(selfRating);
+    this.answerShown=false;
+  }
+
+  
  
 }

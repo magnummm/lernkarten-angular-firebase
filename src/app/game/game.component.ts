@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LearningCard } from 'app/learning-card/learning-card';
+import { SelfRating } from 'enum/SelfRating';
 
 @Component({
   selector: 'app-game',
@@ -31,14 +32,22 @@ export class GameComponent implements OnInit {
       answer: 'Antwort 5',
     },
   ];
+
+  
+
   constructor() {}
 
   ngOnInit() {
-    this.loadCard();
+    // this.loadCard();
   }
 
   loadCard() {
     this.activeLearningCard =
       this.learningCards[Math.floor(Math.random() * this.learningCards.length)];
+  }
+
+  receiveSelfRating(event:any){
+    this.loadCard()
+
   }
 }

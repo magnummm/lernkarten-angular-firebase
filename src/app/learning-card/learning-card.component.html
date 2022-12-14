@@ -1,27 +1,48 @@
 <div class="container position-relative bg-dark">
+  <div *ngIf="!answerShown" >
+  
   <div class="row">
     <div class="position-absolute top-50 start-50 translate-middle">
-      <h1>{{ learningCard.question }}</h1>
+      <h1 class="answer">{{ learningCard.question }}</h1>
     </div>
   </div>
-  <!-- <div class="row">
-    <div class="position-absolute top-50 start-50 translate-middle">
-      {{ learningCard.answer }}
-    </div>
-  </div> -->
   <div
     class="position-absolute bottom-0 start-50 translate-middle-x d-flex py-1"
   >
-    <button type="button" id="" class="btn btn-success flex-fill mx-1">
-      Kann ich
+    <button type="button" (click)="showAnswer()" class="btn btn-primary flex-fill mx-1">
+      Lösung anzeigen
     </button>
 
-    <button type="button" id="" class="btn btn-warning flex-fill mx-1">
-      Kann ich etwas
+    
+  </div>
+</div>
+
+<div *ngIf="answerShown" >
+  <div class="row">
+    <div class="position-absolute top-0 start-50 translate-middle-x">
+      <h1 class="question">{{ learningCard.question }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <h1 class="answer">{{ learningCard.answer }}</h1>
+    </div>
+  </div>
+  <div
+    class="position-absolute bottom-0 start-50 translate-middle-x d-flex py-1"
+  >
+    <button type="button" (click)="sendSelfRating(selfRating.SURE ) " class="btn btn-success flex-fill mx-1">
+      {{selfRating.SURE }}
     </button>
 
-    <button type="button" id="" class="btn btn-danger flex-fill mx-1">
-      Kann ich nicht
+    <button type="button" (click)="sendSelfRating(selfRating.PARTLYSURE )" class="btn btn-warning flex-fill mx-1">
+      {{selfRating.PARTLYSURE }}
+    </button>
+
+    <button type="button" (click)="sendSelfRating(selfRating.UNSURE ) " class="btn btn-danger flex-fill mx-1">
+      {{selfRating.UNSURE }}
     </button>
   </div>
+</div>
+
 </div>

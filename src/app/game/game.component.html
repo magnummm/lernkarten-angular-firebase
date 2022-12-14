@@ -8,9 +8,11 @@
         <button (click)="loadCard()" type="button" class="btn btn-primary">
           Start
         </button>
+        <!-- []=input, ()=output -->
         <app-learning-card
           *ngIf="activeLearningCard"
           [learningCard]="activeLearningCard"
+          (selfRatingOut)="receiveSelfRating($event)"
         ></app-learning-card>
       </div>
     </div>
