@@ -13,53 +13,53 @@ export class GameComponent implements OnInit {
   learningCards: LearningCard[] = [
     {
       id: 1,
-      question: 'Frage 1',
-      answer: 'Antwort 1',
+      question: '1+1?',
+      answer: '2',
     },
     {
       id: 2,
-      question: 'Frage 2',
-      answer: 'Antwort 2',
+      question: '13%2',
+      answer: '1',
     },
     {
       id: 3,
-      question: 'Frage 3',
-      answer: 'Antwort 3',
+      question: 'Eine Deklaration von "( )" steht für was in der .html? ',
+      answer: 'Output - wird nach aussen zur Verfügung gestellt & kommt zurück',
     },
     {
       id: 4,
-      question: 'Frage 4',
-      answer: 'Antwort 4',
+      question: 'Eine Deklaration von "[ ]" steht für was in der .html?',
+      answer: 'Input - füllt die jeweilige Komponente',
     },
     {
       id: 5,
-      question: 'Frage 5',
-      answer: 'Antwort 5',
+      question: '"...folder" bedeutet?',
+      answer: 'Nimm den folder und sei durch Attribute erweiterbar',
     },
     {
       id: 6,
-      question: 'Frage 6',
-      answer: 'Antwort 6',
+      question: 'Interpolations gekennzeichnet durch "{ }" werden in welcher Komponente verwendet?',
+      answer: 'In der html Komponente',
     },
     {
       id: 7,
-      question: 'Frage 7',
-      answer: 'Antwort 7',
+      question: 'Wofür stehen Interpolations in der html "{ }"?',
+      answer: 'Aufruf einer Variable aus der .ts',
     },
     {
       id: 8,
-      question: 'Frage 8',
-      answer: 'Antwort 8',
+      question: 'Was sollte sich im Constructor befinden?',
+      answer: 'Services',
     },
     {
       id: 9,
-      question: 'Frage 9',
-      answer: 'Antwort 9',
+      question: 'Was steht in @NgModule einer .ts unter providers?',
+      answer: 'Services und Values für die Dependency Injection',
     },
     {
       id: 10,
-      question: 'Frage 10',
-      answer: 'Antwort 10',
+      question: 'Wofür steht das Ausrufezeichen hinter einer Variablen in der .ts?',
+      answer: 'Warte noch, der Wert kommt später',
     },
     {
       id: 11,
@@ -68,8 +68,8 @@ export class GameComponent implements OnInit {
     },
     {
       id: 12,
-      question: 'Frage 12',
-      answer: 'Antwort 12',
+      question: 'Was steht in @NgModule einer .ts unter imports?',
+      answer: 'Modules',
     },
     {
       id: 13,
@@ -83,8 +83,8 @@ export class GameComponent implements OnInit {
     },
     {
       id: 15,
-      question: 'Frage 15',
-      answer: 'Antwort 15',
+      question: 'Was steht in @NgModule einer .ts unter declarations?',
+      answer: 'Components',
     },
   ];
 
