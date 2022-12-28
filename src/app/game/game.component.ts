@@ -38,13 +38,13 @@ export class GameComponent implements OnInit {
     },
     {
       id: 6,
-      question: 'Interpolations gekennzeichnet durch "{ }" werden in welcher Komponente verwendet?',
+      question: 'Interpolations gekennzeichnet durch "{{ }}" werden in welcher Komponente verwendet?',
       answer: 'In der html Komponente',
     },
     {
       id: 7,
-      question: 'Wofür stehen Interpolations in der html "{ }"?',
-      answer: 'Aufruf einer Variable aus der .ts',
+      question: 'Wofür stehen Interpolations in der html "{{ }}"?',
+      answer: 'Datentransfer vom Typescript Code zur View (Html Component)',
     },
     {
       id: 8,
