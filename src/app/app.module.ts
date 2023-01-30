@@ -12,13 +12,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { environment } from 'environments/environment';
 import { GameComponent } from './game/game.component';
 import { LearningCardComponent } from './learning-card/learning-card.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     GameComponent,
-    LearningCardComponent
+    LearningCardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
