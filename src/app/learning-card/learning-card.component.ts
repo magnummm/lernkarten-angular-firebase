@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SelfRating } from 'enum/SelfRating';
 import { LearningCard } from './learning-card';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Database, set, ref, update } from '@angular/fire/database';
 
 @Component({
   selector: 'app-learning-card',

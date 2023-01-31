@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LearningCard } from 'app/learning-card/learning-card';
+import { AuthService } from 'app/services/auth.service';
 import { SelfRating } from 'enum/SelfRating';
 
 @Component({
@@ -96,7 +97,7 @@ export class GameComponent implements OnInit {
 
   activeLearningCardIndex = 0;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
     // this.loadCard();
@@ -122,4 +123,9 @@ export class GameComponent implements OnInit {
     this.activeLearningCardIndex++;
     this.setActiveLearningCard();
   }
+
+
+  signOutUser() {
+    this.authService.signOutUser();
+   }
 }

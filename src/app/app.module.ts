@@ -13,6 +13,7 @@ import { environment } from 'environments/environment';
 import { GameComponent } from './game/game.component';
 import { LearningCardComponent } from './learning-card/learning-card.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { LoginComponent } from './login/login.component';
     DashboardComponent,
     GameComponent,
     LearningCardComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

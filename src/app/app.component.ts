@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Database, set, ref, update } from '@angular/fire/database';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lernkarten-angular-firebase';
-}
+ }
+  

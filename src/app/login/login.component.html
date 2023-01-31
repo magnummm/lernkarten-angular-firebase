@@ -1,4 +1,50 @@
-<div class="back">
+<div *ngIf="!showLogin" id="signup-box">
+  <div class="div-center" >
+  <div class="">
+        <form #LoginForm="ngForm" (ngSubmit)="registerUser(LoginForm.value)">
+            <h1>Sign up</h1>
+            <input type="text" ngModel id="email" name="email" placeholder="E-mail" />
+            <input type="password" ngModel id="password" name="password" placeholder="Password" />
+
+            <input type="submit" id="saveData" name="signup_submit" value="Sign up" />
+            <button (click)="cancel()" type="button" class="btn btn-link">Abbrechen</button>
+        </form>
+    </div>
+   <!--  <div class="right">
+        <span class="loginwith">Sign up with<br />social network</span>
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google" id='login'>Log in with Google+</button>
+    </div> -->
+</div>  
+</div>
+
+
+<div *ngIf="showLogin" id="signin-box">
+  <div class="div-center">
+      <form #LoginForm="ngForm" (ngSubmit)="signInUser(LoginForm.value)">
+          <h1>Sign in</h1>
+          <input type="text" ngModel id="email" name="email" placeholder="E-mail" />
+          <input type="password" ngModel id="password" name="password" placeholder="Password" />
+
+          <input type="submit" id="saveData" name="signin_submit" value="Sign in" />
+          <button (click)="showLogin = false" type="button" class="btn btn-link">Sign Up</button>
+      </form>
+  </div>
+  <!-- <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google" id='login'>Log in with Google+</button>
+  </div> -->
+
+  
+</div>
+
+
+
+
+<!-- <div class="back">
 
 
     <div class="div-center">
@@ -9,7 +55,7 @@
   
         <h3>Login</h3>
         <hr />
-        <form>
+        <form #LoginForm="ngForm" (ngSubmit)="registerUser(LoginForm.value)">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
@@ -28,4 +74,4 @@
   
       </div>
   
-    </div>
+    </div> -->
